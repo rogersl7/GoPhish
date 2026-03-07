@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoPhish! - Phishing Detection Tool</title>
+  <link rel="icon" type="image/x-icon" href="/icons/gophishicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <img id="logo" src="../icons/gophishicon.svg" alt="GoPhish logo">
+      <h1>GoPhish!</h1>
+      <h3>Advanced Phishing Detection & Website Analysis</h3>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- STATUS SECTION (shown while loading) -->
+    <div class="verdict-section" id="loading-section">
+      <h2>Analyzing Website</h2>
+      <div id="url-display" style="color: var(--primary-color); margin: 1em 0; word-break: break-all; overflow-wrap: anywhere;"></div>
+      <div id="status-message" style="margin-top: 1em; font-style: italic; color: var(--text-muted);">
+        Initializing analysis...
+      </div>
+    </div>
+
+    <!-- VERDICT SUMMARY SECTION (hidden until analysis complete) -->
+    <div class="verdict-section" id="results-section" style="display: none;">
+      <h2>Analysis Summary</h2>
+      <div class="verdict-badge verdict-suspicious">⚠️ Suspicious</div>
+      <div class="verdict-summary">
+        This website shows several indicators commonly associated with phishing attempts.
+        The domain was registered recently, uses an unusual TLD, and contains suspicious
+        authentication requests. We recommend extreme caution when interacting with this site.
+      </div>
+      <button class="btn">View Full Report</button>
+      <button class="btn btn-secondary">Report This Site</button>
+    </div>
+
+    <!-- LIVESHOT SECTION -->
+    <section class="section" id="liveshot-section" style="display: none;">
+      <h2>Website Preview</h2>
+      <div class="liveshot-container">
+        <div class="liveshot-placeholder">
+          <h3>📸 Live Screenshot</h3>
+          <p>Screenshot of the analyzed website will appear here</p>
+          <p style="font-size: 0.9em; margin-top: 1em;">Powered by URLScan.io</p>
+        </div>
+        <img id="liveshot" alt="URLScan liveshot of the website" style="display: none;">
+      </div>
+    </section>
+
+    <!-- DETAILED ANALYSIS SECTION -->
+    <section class="section" id="details-section" style="display: none;">
+      <h2>Technical Details</h2>
+      <div class="details-grid">
+        <div class="detail-item">
+          <h4>🌐 Domain Information</h4>
+          <p><span class="detail-label">Domain:</span> example-phishing-site.xyz</p>
+          <p><span class="detail-label">Registrar:</span> Suspicious Domains Inc.</p>
+          <p><span class="detail-label">Registration Date:</span> 2025-02-10 (4 days ago)</p>
+          <p><span class="detail-label">Expires:</span> 2026-02-10</p>
+        </div>
+        <div class="detail-item">
+          <h4>🔒 SSL Certificate</h4>
+          <p><span class="detail-label">Issuer:</span> Let's Encrypt</p>
+          <p><span class="detail-label">Valid From:</span> 2025-02-12</p>
+          <p><span class="detail-label">Valid Until:</span> 2025-05-13</p>
+          <p><span class="detail-label">Status:</span> ✅ Valid</p>
+        </div>
+        <div class="detail-item">
+          <h4>📍 Server Information</h4>
+          <p><span class="detail-label">IP Address:</span> 192.0.2.123</p>
+          <p><span class="detail-label">Location:</span> Unknown Region</p>
+          <p><span class="detail-label">Hosting Provider:</span> Shady Hosting LLC</p>
+          <p><span class="detail-label">ASN:</span> AS12345</p>
+        </div>
+        <div class="detail-item">
+          <h4>🚩 Risk Indicators</h4>
+          <p>⚠️ Recently registered domain</p>
+          <p>⚠️ Unusual TLD (.xyz)</p>
+          <p>⚠️ Suspicious authentication requests</p>
+          <p>⚠️ Mimics legitimate brand</p>
+        </div>
+        <div class="detail-item">
+          <h4>🔍 Reputation Score</h4>
+          <p><span class="detail-label">Overall Score:</span> 35/100</p>
+          <p><span class="detail-label">Category:</span> High Risk</p>
+          <p><span class="detail-label">Blocklist Status:</span> Found on 3/15 lists</p>
+          <p><span class="detail-label">User Reports:</span> 47 reports</p>
+        </div>
+        <div class="detail-item">
+          <h4>📊 Traffic Analysis</h4>
+          <p><span class="detail-label">Alexa Rank:</span> Unranked</p>
+          <p><span class="detail-label">Estimated Visitors:</span> &lt; 1,000/month</p>
+          <p><span class="detail-label">Page Load Time:</span> 2.3 seconds</p>
+          <p><span class="detail-label">Resources:</span> 15 requests</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOMMENDATIONS SECTION -->
+    <section class="section" id="recommendations-section" style="display: none;">
+      <h2>Recommendations</h2>
+      <div class="card">
+        <h3>🛡️ Stay Safe Online</h3>
+        <p><strong>Do NOT:</strong> Enter personal information, passwords, or financial details on this site.</p>
+        <p><strong>Do:</strong> Verify URLs carefully before clicking links in emails or messages.</p>
+        <p><strong>Do:</strong> Look for HTTPS and valid certificates on legitimate websites.</p>
+        <p><strong>Do:</strong> Report suspicious websites to appropriate authorities.</p>
+      </div>
+      <div class="card">
+        <h3>📧 What is Phishing?</h3>
+        <p>Phishing is a cybercrime where attackers impersonate legitimate organizations to steal sensitive information like usernames, passwords, and credit card details.  Common signs include urgent language, suspicious sender addresses, and requests for personal information.</p>
+      </div>
+      <div class="card">
+        <h3><a href="PhishingInfo.html">📖 Learn More About Phishing!</a></h3>
+      </div>
+        <h3></h3>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong><img src="/icons/gophishicon16.png" alt="GoPhish icon" style="width:16px;height:16px;vertical-align:middle;margin-right:4px;">GoPhish!</strong> - Protecting You From Phishing Attacks</p>
+      <p><a href="About.html">About GoPhish</a> | <a href="PhishingInfo.html">Learn more about phishing</a></p>
+      <p>Developed by Jonathon Kohlman, Emma Danner, Binh An Luong, Lucy Rogers, and Teresa Barreto</p>
+      <p>&copy; University of Cincinnati, 2025-2026</p>
+    </div>
+  </footer>
+
+  <script src="scan.js"></script>
+
+</body>
+</html>

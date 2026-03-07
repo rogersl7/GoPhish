@@ -1,0 +1,465 @@
+/* ===============================
+   COLOR THEME
+   =============================== */
+:root {
+  --background-color: #FFFFFF;
+  --primary-color: #43B2F2;
+  --accent-color-1: #008794;
+  --accent-color-2: #FF9913;
+  --success-color: #22C55E;
+  --danger-color: #EF4444;
+  --warning-color: #F59E0B;
+  --text-color: #222222;
+  --text-muted: #555555;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+/* ===============================
+   GLOBAL STYLES
+   =============================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Tahoma', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 1.5rem);
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+header {
+  background: linear-gradient(135deg, var(--accent-color-1) 0%, var(--primary-color) 100%);
+  color: #fff;
+  padding: 1.5em 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.75rem;
+}
+
+#logo {
+  width: clamp(32px, 5vw, 40px);
+  height: auto;
+  flex-shrink: 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(1.4rem, 5vw, 2.5rem);
+  font-weight: 700;
+  /* sit beside the logo on the same line */
+}
+
+header h3 {
+  margin: 0;
+  font-weight: 400;
+  opacity: 0.9;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  /* take its own full row so it wraps cleanly */
+  width: 100%;
+  padding-left: calc(clamp(32px, 5vw, 40px) + 0.75rem); /* indent under logo */
+}
+
+/* ===============================
+   VERDICT SECTION
+   =============================== */
+.verdict-section {
+  background-color: #f8fafc;
+  border-radius: var(--border-radius);
+  padding: clamp(1.25rem, 4vw, 2rem);
+  margin: 2em 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.verdict-section h2 {
+  margin-top: 0;
+  color: var(--text-color);
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.verdict-badge {
+  display: inline-block;
+  padding: 0.6em 1.5em;
+  border-radius: 50px;
+  font-size: clamp(0.9rem, 3vw, 1.3rem);
+  font-weight: 700;
+  margin: 1em 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.verdict-safe      { background-color: var(--success-color); color: white; }
+.verdict-suspicious { background-color: var(--warning-color); color: white; }
+.verdict-dangerous  { background-color: var(--danger-color);  color: white; }
+
+.verdict-summary {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  color: var(--text-muted);
+  margin: 1em auto;
+  line-height: 1.8;
+  max-width: 65ch;
+}
+
+/* Buttons inside verdict section sit side-by-side then stack */
+.verdict-section .btn {
+  margin: 0.25em;
+}
+
+/* ===============================
+   LINKS
+   =============================== */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--accent-color-1);
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75em 1.4em;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--accent-color-1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary { background-color: var(--accent-color-2); }
+.btn-secondary:hover { background-color: #e68a0a; }
+
+/* ===============================
+   SECTIONS & CARDS
+   =============================== */
+.section {
+  padding: 1.5em 0;
+  margin: 1.5em 0;
+}
+
+.section h2 {
+  color: var(--accent-color-1);
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  margin-bottom: 1em;
+  border-bottom: 3px solid var(--accent-color-2);
+  padding-bottom: 0.5em;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-left: 4px solid var(--accent-color-2);
+  border-radius: var(--border-radius);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  margin: 1em 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--accent-color-1);
+  font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+/* ===============================
+   LIVESHOT SECTION
+   =============================== */
+.liveshot-container {
+  text-align: center;
+  margin: 1.5em 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+#liveshot {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 3px solid var(--accent-color-1);
+}
+
+.liveshot-placeholder {
+  background-color: #e5e7eb;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
+  border-radius: var(--border-radius);
+  color: var(--text-muted);
+  border: 2px dashed var(--primary-color);
+}
+
+/* ===============================
+   DETAILS GRID
+   =============================== */
+.details-grid {
+  display: grid;
+  /* Cards are at least 260px wide; below that they go single column */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1.25em;
+  margin: 1.5em 0;
+}
+
+.detail-item {
+  background-color: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--border-radius);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.detail-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-item h4 {
+  margin-top: 0;
+  color: var(--accent-color-1);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+.detail-item p {
+  margin: 0.4em 0;
+  color: var(--text-muted);
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  word-break: break-word;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  background-color: var(--accent-color-1);
+  color: #fff;
+  text-align: center;
+  padding: clamp(1.25rem, 4vw, 2rem) clamp(1rem, 4vw, 1.5rem);
+  margin-top: 4em;
+}
+
+footer p {
+  margin: 0.4em 0;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+}
+
+footer a {
+  color: var(--accent-color-2);
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+   =============================== */
+
+/* tablet */
+@media (max-width: 768px) {
+  header h3 {
+    /* remove the logo-indent, just float left */
+    padding-left: 0;
+  }
+}
+
+/* phone */
+@media (max-width: 480px) {
+  /* verdict buttons are full-width on mobile */
+  .verdict-section .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0.4em 0;
+  }
+
+  /* section spacing is more compact */
+  .section,
+  .verdict-section {
+    margin: 1em 0;
+  }
+}
+
+/* About page */
+
+/* ===============================
+    SECTIONS
+  =============================== */
+.section {
+  padding: 3em 0;
+}
+
+.section:not(:last-child) {
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.section h2 {
+  color: var(--accent-color-1);
+  font-size: 2em;
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+.section h3 {
+  color: var(--text-color);
+  font-size: 1.3em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.placeholder-text {
+  background-color: #f3f4f6;
+  border-left: 4px solid var(--accent-color-2);
+  padding: 1.5em;
+  border-radius: var(--border-radius);
+  font-style: italic;
+  color: var(--text-muted);
+  margin: 1em 0;
+}
+
+/* ===============================
+  FEATURE LIST
+  =============================== */
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin: 2em 0;
+}
+
+.feature-item {
+  background-color: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--border-radius);
+  padding: 1.5em;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.feature-item:hover {
+  border-color: var(--accent-color-2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.feature-item h4 {
+  margin-top: 0;
+  color: var(--accent-color-1);
+}
+
+.feature-item p {
+  margin: 0;
+  color: var(--text-muted);
+
+}
+
+/* ===============================
+  RED FLAG LIST
+  =============================== */
+.red-flag-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 1.5em;
+  margin: 2em 0;
+}
+
+.red-flag-item {
+  background-color: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--border-radius);
+  padding: 1.5em;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.red-flag-item:hover {
+  border-color: var(--accent-color-2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.red-flag-item h4 {
+  margin-top: 0;
+  color: var(--accent-color-1);
+}
+
+.red-flag-item p {
+  margin: 0;
+  color: var(--text-muted);
+
+}
+
+/* ===============================
+  KEEP AN EYE OUT FOR LIST
+  =============================== */
+.additional-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1000px, 1fr));
+  gap: 1.5em;
+  margin: 2em 0;
+}
+
+.additional-list-item {
+  background-color: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--border-radius);
+  padding: 1.5em;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.additional-list-item:hover {
+  border-color: var(--accent-color-2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-list-item h4 {
+  margin-top: 0;
+  color: var(--accent-color-1);
+}
+
+.additional-list-item p {
+  margin: 0;
+  color: var(--text-muted);
+
+}

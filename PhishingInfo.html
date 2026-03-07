@@ -1,0 +1,109 @@
+About · HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - GoPhish!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <img id="logo" src="../icons/gophishicon.svg">
+      <h1>What is Phishing?</h1>
+      <h3>Learn how to identify potential phishing attacks</h3>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- WHAT IS PHISHING SECTION -->
+    <section class="section">
+      <h2>What is Phishing?</h2>
+      <div class="placeholder-text">
+        Phishing is a cybercrime where attackers impersonate legitimate organizations to steal sensitive information like usernames, passwords, and credit card details.  Common signs include urgent language, suspicious sender addresses, and requests for personal information.  The goal of the attack is to pressure someone to click a link that could allow them to give up valuable personal information.  <br><br>
+        Phishing is most common in emails.  This is often accomplished by including a link in an email that the attacker intends to be clicked.  When the link is clicked, it begins the attack, which could be an attempt to gather information like a sign in screen where credentials are captured, or a form where information is entered and stolen.  The link could also be used to download/install malware to the device, compromising more than just information.  <br><br>
+        <strong>Phishing is different than spam, as it is actively trying to gain information or cause harm, while spam is typically just advertising.  </strong>
+    </div>
+    </section>
+
+    <!--RED FLAGS SECTION-->
+    <section class="section">
+      <h2>Common Red Flags</h2>
+      <div class="placeholder-text">
+        Being able to identify the common red flags of phishing can prevent many of these attacks.  
+      </div>
+
+      <div class="red-flag-list">
+        <div class="red-flag-item">
+          <div class="feature-icon">👤</div>
+          <h4>Sender Information</h4>
+          <p>Look at the sender of the email.  Is the address readable?  Does the address contain typos?  Malicious actors often use tricks to hide fake email addresses, like using "rn" instead of "m" or inserting extra periods into the address.  </p><br>
+          <p>Is the sender who they claim to be?  Sometimes malicious actors try to impersonate businesses or people you know to build trust.  Check email signatures to see if information matches the contact information you know this person would typically reach you by.  Try contacting them through another method like a text or call if you're unsure.  </p>
+        </div>
+
+        <div class="red-flag-item">
+          <div class="feature-icon">⏰</div>
+          <h4>Sense of Urgency</h4>
+          <p>Is the email trying to get you to act on something?  Messaging like "password expires today" or "payment due immediately" can prey on sense of urgency and cause panic to persuade action to click the link.  </p><br>
+          <p>Important items like payments and password resets would give warnings ahead of a deadline, listing the date it is due and eliminating the need for the same urgency.  Look to see if you have previous emails regarding the need to change a password or make a payment to verify if this request is legitimate.  </p>
+        </div>
+
+        <div class="red-flag-item">
+          <div class="feature-icon">❓</div>
+          <h4>Unfamiliar Subject</h4>
+          <p>Sometimes malicious actors may send emails to those who it may not be relevant to.  These are often from larger phishing campaigns where receipients are chosen at random, or emails are sent in bulk to reach a larger audience.  </p><br>
+          <p>If you're unfamiliar with the content or subject of the email, perhaps a topic you don't know about or a field you're not involved in, it could be a phishing campaign trying to target specific crowds.  </p>
+        </div>
+
+        <div class="red-flag-item">
+          <div class="feature-icon">📑</div>
+          <h4>Email Contents/Branding</h4>
+          <p>Malicious actors will often try to impersonate businesses by using branding or images that make the email look more official.  Often these logos or images can be outdated or of poorer quality than a legitimate business would use.  </p><br>
+          <p>Look at the images and content of the email.  If the wording seems poorly written or the images seem of low resolution, it could be attempting to copy or resemble a legitimate business to gain trust.  </p>
+        </div>
+      </div>
+    </section>
+
+    <!--KEEP AN EYE OUT FOR-->
+    <section class="section">
+      <h2>Keep an eye out for these:</h2>
+      <div class="placeholder-text">
+        Other phishing tricks to keep an eye out for
+      </div>
+
+      <div class="additional-list">
+        <div class="additional-list-item">
+          <div class="feature-icon">🔗</div>
+          <h4>Link Shorteners and QR Codes</h4>
+          <p>Link shorteners are used to make a long url shorter for easier typing/reading.  QR codes are useful to access links easier from a mobile device.  However, these can be used by malicious actors to hide a link that may look suspicious.  </p><br>
+          <p><strong>If you spot a shortened link (like a TinyURL or Bitly) or a QR code, check other aspects of the email to verify if the shortened link is legit.  Look for other red flags in the messaging or sender.  GoPhish will not be able to scan a QR code!  </strong></p>
+        </div>
+
+        <div class="additional-list">
+        <div class="additional-list-item">
+          <div class="feature-icon">📁</div>
+          <h4>Attachments</h4>
+          <p>Malicious files can also be attached in emails.  When you receieve emails from someone, look at the file name and type to verify it matches something you are expecting.  Only open or download files you are expecting to receive.  </p><br>
+          <p><strong>If you receive a file you weren't expecting, look for other red flags in the messaging or sender.  GoPhish will not be able to scan attachments!  </strong></p>
+        </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong><img src="/icons/gophishicon16.png" alt="GoPhish icon" style="width:16px;height:16px;vertical-align:middle;margin-right:4px;">GoPhish!</strong> - Protecting You From Phishing Attacks</p>
+      <p><a href="About.html">About GoPhish</a> | <a href="PhishingInfo.html">Learn more about phishing</a></p>
+      <p>Developed by Jonathan Kohlman, Emma Danner, Binh An Luong, Lucy Rogers, and Teresa Barreto</p>
+      <p>&copy; University of Cincinnati, 2025-2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>

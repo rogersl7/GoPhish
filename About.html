@@ -1,0 +1,268 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+  <meta charset="UTF-8" /> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+
+  <title>About - GoPhish!</title> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+
+  <link rel="stylesheet" href="style.css"> 
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> 
+
+  
+
+</head> 
+
+<body> 
+
+  
+
+  <header> 
+
+    <div class="container"> 
+
+      <img id="logo" src="../icons/gophishicon.svg"> 
+
+      <h1>About GoPhish!</h1> 
+
+      <h3>Safer browsing with GoPhish!</h3> 
+
+    </div> 
+
+  </header> 
+
+  
+
+  <main class="container"> 
+
+  
+
+    <!-- WHAT IS GOPHISH SECTION --> 
+
+    <section class="section"> 
+
+      <h2>What is GoPhish?</h2> 
+
+      <div class="card"> 
+
+        <p> Phishing can start with just a click. Interaction with a malicious link can cause users to fall victim to a range of issues such as identity theft, financial loss, malware infection, and more. GoPhish is a Google Chrome Extension for URL click protection, which aims to eliminate risk for users when interacting with potentially malicious links, primarily from email. When a link is clicked, it redirects the user to our GoPhish webpage which breaks down the validity and trustworthiness of the link while also eliminating the malicious interaction. From this information, users will have enough details to determine whether the content they almost interacted with was legitimate or malicious. GoPhish retrieves these details on link validation by using a URLScan.io API key, which is securely stored and accessed through a backend serverless connection. The frontend leverages HTML and CSS, with additional processes using JavaScript. </p> 
+
+      </div> 
+
+    </section> 
+
+
+
+     
+
+   <!-- HOW IT WORKS SECTION  -->
+
+    <section class="section"> 
+
+      <h2>How It Works</h2> 
+
+      <div class="card"> 
+
+     <p>   When you use GoPhish to click a link, the link is opened in URLScan.io, which analyzes its properties and generates a report of its findings while also gathering a still image of the site and presenting it alongside the report. This report, coupled with the live screenshot, enable you to decide for yourself, with a bit of help, if that link is actually trustworthy or if you’re better off not clicking on it. </p> 
+
+      </div> 
+
+  
+
+      <div class="feature-list"> 
+
+        <div class="feature-item"> 
+
+          <div class="feature-icon">🔍</div> 
+
+          <h4>Link Analysis</h4> 
+
+          <p> To analyze links, we look at quite a few things: if the top level domain or country code matches where the website claims to be from; if the certificate is valid; if certain risk indicators are present--some specific to phishing and some more broad; if any common reputation-based threat detectors have flagged it, and more. All of those factor into our analysis of if the link is trustworthy or not. </p> 
+
+        </div> 
+
+  
+
+        <div class="feature-item"> 
+
+          <div class="feature-icon">🛡️</div> 
+
+          <h4>Threat Detection</h4> 
+
+          <p> GoPhish’s threat detection system is extensive and multi-faceted. We leverage URLScan’s ability to analyze links and their current and historical properties to develop a report on a link’s trustworthiness. Some of the main things that factor into the decision are server information, presence or lack thereof in any reputation-based threat lists, validity of a SSL certificate by a trusted authority, and an analysis of the web traffic to the domain. Those aren’t all of the things that are considered when deciding if a link is a threat, but they give a good idea of the process behind the decision. </p> 
+
+        </div> 
+
+  
+
+        <div class="feature-item"> 
+
+          <div class="feature-icon">📊</div> 
+
+          <h4>Detailed Reports</h4> 
+
+          <p>The full report is presented under the “Technical Details” heading and features things like domain and server information, risk indicators, traffic analysis, SSL certificate details, and the reputation score of the link. </p> 
+
+        </div> 
+
+  
+
+        <div class="feature-item"> 
+
+          <div class="feature-icon">⚡</div> 
+
+          <h4>Real-Time Scanning</h4> 
+
+          <p>URLScan.io’s Live Screenshot feature allows us to display a current image of what the site the link would take you to looks like. URLScan.io also allows us to capture and analyze incoming and outgoing web traffic from the site, painting a picture of site attributes and behavior. </p> 
+
+        </div> 
+
+      </div> 
+
+    </section> 
+
+  
+
+    <!-- WHY WE BUILT IT SECTION -->
+
+    <section class="section"> 
+
+      <h2>Why We Built GoPhish</h2> 
+
+      <div class="card"> 
+
+<p> GoPhish was born out of the idea that everyone, of all ages and technological abilities, deserves to take charge of their internet safety. Phishing attacks are only increasing as time goes on -- with a 14% increase in volume in 2025 alone according to KnowBe4 -- yet education is severely lacking for the everyday user. The current solutions widely target working professionals, with their products aimed at an enterprise environment. GoPhish puts digital security into the hands of the masses, enabling everyone to make smarter, safer choices while browsing. </p> 
+
+      </div> 
+
+  
+
+      <h3>The Problem</h3> 
+
+      <div class="card"> 
+
+     <p>   
+
+Phishing is one of the fastest-growing forms of cyberattacks. Think about all the suspicious links you get from people claiming to be the USPS, or from email domains you don’t recognize. Clicking on one of those and putting in your information can lead to all sorts of consequences, ranging from but not limited to identity theft to financial losses. Some of these attacks are easy to spot, but others are far more sophisticated, and the usage of generative AI has made those sophisticated attacks more prevalent. Unfortunately, it’s all too common to miss the signs and only realize you’ve been phished once it’s too late.  
+
+</p> 
+
+      </div> 
+
+  
+
+      <h3>Our Solution</h3> 
+
+      <div class="card"> 
+
+<p> We created GoPhish to fill the gaps that existing tools leave. KnowBe4 works on user education, while URLScan and VirusTotal do URL Scanning, but none of those do both, and they’re definitely not free. GoPhish, however, is available to anyone who wants it, and none of our features are locked behind a paywall. We offer a simple, user-friendly interface, seamless integration with email and web, powerful analysis, and real-time previews of sites in addition to a dedicated education section to teach our users how to recognize and prevent phishing attacks, so they get smarter with each link they click. </p> 
+
+      </div> 
+
+    </section> 
+
+  
+
+   <!-- TECHNOLOGY SECTION -->
+
+    <section class="section"> 
+
+      <h2>Technology</h2> 
+
+      <div class="card"> 
+
+<p> We built GoPhish as a Chrome extension, meaning it’s hosted on the Chrome Web Store and follows a set format. It contains JavaScript elements, HTML and CSS to display the web page, and incorporates URLScan.io and Vercel as third-party elements for functionality. Because of where it’s hosted and how it’s built, it integrates seamlessly with email platforms and web browsing, allowing users to practice safer browsing habits in most of their day-to-day online activities.  
+
+</p> 
+
+      </div> 
+
+  
+
+      <h3>Built With</h3> 
+
+      <div class="card"> 
+<p>
+The technologies that make GoPhish possible are:
+  <ul>
+
+<li>URLScan.io, which provides the basis for our live screenshot tool and the link analysis</li>
+
+<li>Google Chrome’s Web Store and Extension APIs, which host our extension and facilitate communication between the extension and its content and users</li>
+
+<li>HTML, CSS, and JavaScript, which format and display the webpage that links redirect to </li>
+
+<li>Vercel runs a service which securely stores our URLScan API key. When called by our code, it uses the stored key to make requests to the URL scanning service.</li>
+
+</ul>
+      </p>
+      </div> 
+
+    </section> 
+
+  
+
+   <!-- GET STARTED SECTION -->
+
+    <section class="section"> 
+
+      <h2>Get Started</h2> 
+
+      <div class="card"> 
+
+<ol type="1">
+<li>The first step to using GoPhish is to install it. GoPhish can be installed for free from the Chrome Web Store.</li>
+
+<li>To access the Chrome Web Store, simply click on the little puzzle piece icon in the top right of your Chrome window.</li>
+
+<li>From there, hit the little gear that says “manage extensions” and then look at the left hand side of the screen for the following link to the Store.</li>
+
+<li>Once there, simply search “GoPhish” to find the extension.</li>
+<li>Upon navigating to the extension’s page, you can hit the “add to Chrome” button to add the extension to your browser.</li>
+</ol>
+      </div> 
+
+  
+
+      <a href="GoPhish.html" class="btn">Try GoPhish Now</a> 
+
+    </section> 
+
+  
+
+  
+
+  </main> 
+
+  
+
+  <footer> 
+
+    <div class="container"> 
+
+      <p><strong><img src="/icons/gophishicon16.png" alt="GoPhish icon" style="width:16px;height:16px;vertical-align:middle;margin-right:4px;">GoPhish!</strong> - Protecting You From Phishing Attacks</p> 
+
+      <p>Developed by Jonathon Kohlman, Emma Danner, Binh An Luong, Lucy Rogers, and Teresa Barreto</p> 
+
+      <p>&copy; University of Cincinnati, 2025-2026</p> 
+
+      <p><a href="GoPhish.html">Back to Scanner</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
+
+    </div> 
+
+  </footer> 
+
+  
+
+</body> 
+
+</html> 
