@@ -1,4 +1,5 @@
-<h1>GoPhish!</h1>
+<h1><img width="30" height="30" alt="gophishicon" src="https://github.com/user-attachments/assets/1f4bc47e-cef4-49a9-8ec7-815f2b06b572" /> GoPhish!</h1>
+
 
 <h2>Description</h2>  
 
