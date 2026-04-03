@@ -10,7 +10,7 @@ When a user clicks on a link, they are sent to a GoPhish! webpage that displays 
 <h2>Getting Started</h2>  
 
 <h3>Installing</h3>
-<li>The extension can be downloaded for free from the [Google Chrome Store](https://chromewebstore.google.com/detail/ingfhkanmpbloalihcbmpcbhipnleooe?utm_source=item-share-cb).</li>
+<li>The extension can be downloaded for free from the <a href="https://chromewebstore.google.com/detail/ingfhkanmpbloalihcbmpcbhipnleooe?utm_source=item-share-cb">Chrome Web Store.</a>
 <li>To download, click Add to Chrome and click Continue to Install and Add extension if pop ups appear.</li>
 
 
